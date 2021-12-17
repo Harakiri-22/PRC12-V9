@@ -1,0 +1,65 @@
+﻿<Window x:Class="PRC12_V9.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:PRC12_V9"
+        mc:Ignorable="d"
+        Title="Practice 12 Square and Hour" Height="240" Width="400" Loaded="Window_Loaded" WindowStartupLocation="CenterScreen" ResizeMode="NoResize">
+    <Grid>
+        <Menu VerticalAlignment="Top" Background="LightGreen">
+            <MenuItem Header="Файл">
+                <MenuItem Header="Стереть" Click="Clear_Click"/>
+                <Separator></Separator>
+                <MenuItem Header="Выход" Click="Exit_Click"/>
+            </MenuItem>
+            <MenuItem Header="Справка" Click="Information_Click"/>
+        </Menu>
+        <TabControl HorizontalAlignment="Left" Height="151" Margin="0,18,0,0" VerticalAlignment="Top" Width="392">
+            <TabItem Header="Площадь круга">
+                <Grid Background="AliceBlue">
+                    <GroupBox Header="Исходные данные" HorizontalAlignment="Left" Height="123" VerticalAlignment="Top" Width="180">
+                        <Grid HorizontalAlignment="Left" Height="100" Margin="10,0,-2,0" VerticalAlignment="Top" Width="160">
+                            <TextBox x:Name="square" HorizontalAlignment="Left" Height="23" Margin="10,41,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="140"/>
+                            <Label Content="Площадь:" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="140"/>
+                            <Button x:Name="Find" Content="Найти" HorizontalAlignment="Left" Margin="10,69,0,0" VerticalAlignment="Top" Width="140" Height="21" Click="Find_Click"/>
+                        </Grid>
+                    </GroupBox>
+                    <GroupBox Header="Вывод" HorizontalAlignment="Left" Height="123" Margin="206,0,0,0" VerticalAlignment="Top" Width="180">
+                        <Grid HorizontalAlignment="Left" Height="100" Margin="10,0,-2,0" VerticalAlignment="Top" Width="160">
+                            <TextBox x:Name="length" HorizontalAlignment="Left" Height="23" Margin="10,67,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="140"/>
+                            <TextBox x:Name="diameter" HorizontalAlignment="Left" Height="23" Margin="10,39,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="140"/>
+                            <Label Content="Диаметр и длина:" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="140" Height="24"/>
+                        </Grid>
+                    </GroupBox>
+                </Grid>
+            </TabItem>
+            <TabItem Header="Сутки">
+                <Grid Background="AliceBlue">
+                    <GroupBox Header="Исходные данные" HorizontalAlignment="Left" Height="123" VerticalAlignment="Top" Width="180">
+                        <Grid HorizontalAlignment="Left" Height="100" Margin="10,0,-2,0" VerticalAlignment="Top" Width="160">
+                            <TextBox x:Name="kolSecond" HorizontalAlignment="Left" Height="23" Margin="10,41,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="140"/>
+                            <Label Content="Количество секунд:" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="140"/>
+                            <Button x:Name="FindKol" Content="Найти" HorizontalAlignment="Left" Margin="10,69,0,0" VerticalAlignment="Top" Width="140" Height="21" Click="FindKol_Click"/>
+                        </Grid>
+                    </GroupBox>
+                    <GroupBox Header="Вывод" HorizontalAlignment="Left" Height="123" Margin="206,0,0,0" VerticalAlignment="Top" Width="180">
+                        <Grid HorizontalAlignment="Left" Height="100" Margin="10,0,-2,0" VerticalAlignment="Top" Width="160">
+                            <TextBox x:Name="findKolHour" HorizontalAlignment="Left" Height="23" Margin="10,41,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="140"/>
+                            <Label Content="С начала суток прошло:" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="150"/>
+                            <Label Content="часов." HorizontalAlignment="Left" Margin="10,69,0,0" VerticalAlignment="Top" Width="140"/>
+                        </Grid>
+                    </GroupBox>
+                </Grid>
+            </TabItem>
+        </TabControl>
+        <StatusBar VerticalAlignment="Bottom" Height="30" Background="White">
+            <Border BorderThickness="5"/>
+            <TextBlock Text="Вариант 9"/>
+            <Border BorderThickness="30"/>
+            <TextBlock x:Name="Data"/>
+            <Border BorderThickness="30"/>
+            <TextBlock x:Name="Time"/>
+        </StatusBar>
+    </Grid>
+</Window>
